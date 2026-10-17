@@ -1,0 +1,11 @@
+services:
+  postgres:                          # a container we name "postgres"
+    image: postgres:16               # the pre-packaged Postgres version 16, downloaded from Docker Hub
+    environment:                     # settings passed in at startup
+      POSTGRES_USER: retail
+      POSTGRES_PASSWORD: retail_pw
+      POSTGRES_DB: retail            # creates a database called "retail" on first start
+    ports: ["5432:5432"]             # laptop port 5432 -> container port 5432
+    volumes: ["pgdata:/var/lib/postgresql/data"]   # keeps data on your disk
+volumes:
+  pgdata:

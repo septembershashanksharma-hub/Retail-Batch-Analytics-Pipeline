@@ -1,0 +1,16 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Python-generated files
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated data: recreate with export_tables.py
+exports/
+
+# Local editor settings
+.vscode/
